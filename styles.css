@@ -1,0 +1,358 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Playfair Display", serif;
+    scroll-behavior: smooth
+}
+
+
+
+
+button.normal {
+    font-size: 14px;
+    font-weight: 600;
+    padding: 15px 30px;
+    color: #000;
+    background-color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: 0.2s;
+}
+
+#header {
+    width: 100%;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0;
+    position: fixed;
+    z-index: 1000;
+}
+
+.section-p1 {
+    padding: 50px 80px;
+}
+
+
+
+.logo-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+}
+
+.container-logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-texto {
+    margin-left: 20px;
+}
+
+.menu li{
+    display: inline-block;
+    margin: 0 10px;
+}
+
+#sobre {
+    height: 1000px;
+    width: auto;
+    background-clip: content-box;
+}
+
+.menu li a {
+    font-size: 24px;
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+.principal-container {
+    width: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+
+.imagem-mulher {
+    width: 500px;
+    height: auto;
+    margin: 150px 300px;
+    border-radius: 150px;
+} 
+
+.principal-container h1 {
+    font-size: 100px;
+    width: 800px;
+}
+
+.principal-container h2 {
+    width: 500px;
+}
+
+.titulo-produtos {
+    text-align: center
+}
+
+.titulo-produtos h2 {
+    font-size: 90px;
+}
+
+#produto1 {
+    text-align: center;
+    flex-wrap: wrap; 
+    display: flex;
+    flex-grow: 1;
+}
+
+#produto1 .container-item {
+    padding: 10px;
+}
+
+
+
+#produto1 .pro {
+    width: calc((1000px - 20px) / 3); /* Subtraído 20px para levar em conta a margem de 10px em cada lado do .pro */
+    min-width: 250px;
+    padding: 10px 12px;
+    border: 1px solid #cce7d0;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 20px 20px 30px rgb(0,0,0,0.02);
+    margin: 15px 0;
+    transition: 0.2s ease;
+    position: relative;
+    flex-grow: 1;
+}
+
+#produto1 h2 {
+    font-size: 100px;
+    margin-top: 0;
+}
+
+#produto1 p {
+    font-size: 20px;
+}
+
+#produto1 .pro:hover {
+    box-shadow: 20px 20px 30px rgb(0, 0, 0, 0.06) ;
+}
+
+#produto1 .pro img{
+    width: 100%;
+    border-radius: 20px;
+}
+
+#produto1 .pro .des{
+    text-align: start;
+    padding: 10px;
+}
+
+#produto1 .pro .des span {
+    color: #606063;
+    font-size: 12px;
+}
+
+#produto1 .pro .des h5{
+    padding-top: 7px;
+    color: #1a1a1a;
+    font-size: 14pxs;
+}
+
+#produto1 .pro .des i {
+    font-size: 12px;
+    color: rgb(243, 181, 25);
+}
+
+#produto1 .pro .des h4 {
+    color: green;
+}
+
+
+#produto1 a{
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50px;
+    background-color: #e8f6ea;
+    color: black;
+    border: 1px solid #cce7d0;
+    bottom: 20px;
+    right: 10px;
+    position: absolute;
+}
+
+#banner {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    background: #611C8C;
+    background: linear-gradient(135deg, #611C8C, #B83AEA);
+    color: white;
+    width: 100%;
+    height: 30vh;
+    background-size: cover;
+    background-position: center;
+}
+
+#banner h4{
+    font-size: 16px;
+}
+
+#banner h2{
+    margin-bottom: 20px;
+}
+
+#banner span {
+    color: #088178;
+    border: #000;
+    border-radius: 5px;
+}
+
+#banner button:hover {
+    background: #088178;
+    color: white;
+}
+
+#banner button{
+    text-decoration: none;
+}
+
+#contato .form {
+    display: flex;
+    width: 40%;
+}
+
+#contato {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    background: #05082A;
+    background: linear-gradient(45deg, #05082A, #010101);
+}
+
+#contato h4{
+    font-size: 22px;
+    font-weight: 700;
+    color: white;
+}
+
+#contato p {
+    font-size: 14px;
+    font-weight: 600;
+    color: #606063;
+    padding: 10px 0;
+}
+
+#contato p span {
+    color: #ffbd27;
+}
+
+#contato input{
+    height: 3.125rem;
+    padding: 0 1.25em;
+    font-size: 14px;
+    width: 100%;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    outline: none;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+#contato button{
+    background-color: #088178;
+    color: #fff;
+    white-space: nowrap;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+section {
+    padding: 60px 0;
+}
+
+section .section-title {
+    text-align: center;
+    color: #000;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+#footer {
+    background: #fff !important;
+}
+#footer h5{
+  padding-left: 10px;
+    border-left: 3px solid #000;
+    padding-bottom: 6px;
+    margin-bottom: 20px;
+    color:#000;
+}
+#footer a {
+    color: #000;
+    text-decoration: none !important;
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+}
+#footer ul.social li{
+  padding: 3px 0;
+}
+#footer ul.social li a i {
+    margin-right: 5px;
+  font-size:25px;
+  -webkit-transition: .5s all ease;
+  -moz-transition: .5s all ease;
+  transition: .5s all ease;
+}
+#footer ul.social li:hover a i {
+  font-size:30px;
+  margin-top:-10px;
+}
+#footer ul.social li a,
+#footer ul.quick-links li a{
+  color:#000;
+}
+#footer ul.social li a:hover{
+  color:#000;
+}
+#footer ul.quick-links li{
+  padding: 3px 0;
+  -webkit-transition: .5s all ease;
+  -moz-transition: .5s all ease;
+  transition: .5s all ease;
+}
+#footer ul.quick-links li:hover{
+  padding: 3px 0;
+  margin-left:5px;
+  font-weight:700;
+}
+#footer ul.quick-links li a i{
+  margin-right: 5px;
+}
+#footer ul.quick-links li:hover a i {
+    font-weight: 700;
+}
+
+@media (max-width:767px){
+  #footer h5 {
+    padding-left: 0;
+    border-left: transparent;
+    padding-bottom: 0px;
+    margin-bottom: 10px;
+}
+}
