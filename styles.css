@@ -8,7 +8,21 @@
 }
 
 
+#mobile {
+    display: none;
+    justify-content: center;
+}
 
+#header {
+    display: flex;
+    width: 100%;
+    background-color: black;
+    color: white;
+    justify-content: space-around;
+    position: fixed;
+    z-index: 1000;
+    align-items: center;
+}
 
 button.normal {
     font-size: 14px;
@@ -23,17 +37,6 @@ button.normal {
     transition: 0.2s;
 }
 
-#header {
-    width: 100%;
-    background-color: black;
-    color: white;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 10px 0;
-    position: fixed;
-    z-index: 1000;
-}
 
 .section-p1 {
     padding: 50px 80px;
@@ -62,10 +65,16 @@ button.normal {
 }
 
 #sobre {
-    height: 1000px;
-    width: auto;
-    background-clip: content-box;
+    height: 100vh;
+    display: flex;
+    justify-content: center; /* Centralizar horizontalmente */
+    align-items: center; /* Centralizar verticalmente */
 }
+
+#close {
+    display: none;
+}
+
 
 .menu li a {
     font-size: 24px;
@@ -73,31 +82,29 @@ button.normal {
     color: white;
     text-decoration: none;
     padding: 10px 20px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-top: 10px
 }
 
 .principal-container {
-    width: 100vh;
     display: flex;
+    justify-content: space-between; /* Distribui o espaço entre os elementos */
     align-items: center;
-    justify-content: space-around;
 }
 
 
 
 .imagem-mulher {
-    width: 500px;
-    height: auto;
-    margin: 150px 300px;
+    width: 400px;
+    margin: 100px 100px;
     border-radius: 150px;
 } 
 
 .principal-container h1 {
-    font-size: 100px;
-    width: 800px;
-}
-
-.principal-container h2 {
-    width: 500px;
+    font-size: 24px;
+    
 }
 
 .titulo-produtos {
@@ -108,32 +115,40 @@ button.normal {
     font-size: 90px;
 }
 
+
+
 #produto1 {
     text-align: center;
     flex-wrap: wrap; 
     display: flex;
-    flex-grow: 1;
 }
 
 #produto1 .container-item {
-    padding: 10px;
+    padding-top: 20px;
+    justify-content: space-between;
+    display: flex;
+    /* margin-left: 30px; */
 }
 
-
-
 #produto1 .pro {
-    width: calc((1000px - 20px) / 3); /* Subtraído 20px para levar em conta a margem de 10px em cada lado do .pro */
+    width: 23%;
     min-width: 250px;
     padding: 10px 12px;
     border: 1px solid #cce7d0;
-    border-radius: 20px;
+    border-radius: 25px;
     cursor: pointer;
     box-shadow: 20px 20px 30px rgb(0,0,0,0.02);
     margin: 15px 0;
     transition: 0.2s ease;
     position: relative;
     flex-grow: 1;
+    margin: 10px;
 }
+
+
+
+
+
 
 #produto1 h2 {
     font-size: 100px;
@@ -149,7 +164,7 @@ button.normal {
 }
 
 #produto1 .pro img{
-    width: 100%;
+    width: 300px;
     border-radius: 20px;
 }
 
@@ -254,7 +269,7 @@ button.normal {
 #contato p {
     font-size: 14px;
     font-weight: 600;
-    color: #606063;
+    color: #a0a0a1;
     padding: 10px 0;
 }
 
@@ -348,6 +363,110 @@ section .section-title {
     font-weight: 700;
 }
 
+@media (max-width:690px) {
+    .principal-container h1 {
+        display: none;
+        
+    }
+
+    .imagem-mulher {
+        margin: 0;
+    }
+
+    .container-img {
+
+    }
+}
+
+@media (max-width:799px){
+
+    .section-p1 {
+        padding: 40px 40px;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        top: 0;
+        right: -600px;
+        height: 300vh;
+        width: 400px;
+        background-color: #000;
+        box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+        padding: 80px 0 0 10px;
+        transition: 0.3s;
+    }
+
+    .menu.active {
+        right: 0px;
+    }
+
+    .menu li {
+        margin-bottom: 25px;
+    }
+
+    #mobile {
+        display: flex;
+        align-items: center;
+    }
+
+    #mobile i {
+        color: #fff;
+        text-decoration: none;
+        font-size: 24px;
+        padding-left: 20px;
+    }
+
+    #close {
+        display: initial;
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        color: white;
+        font-size: 24px;
+    }
+
+    #bag {
+        display: none;
+    }
+
+
+    #produto1 .container-item {
+        justify-content: center;
+ 
+    }
+
+    #produto1 .pro {
+        margin: 10px;
+    }
+
+    #produto1 {
+        align-items: center;
+        justify-content: center;
+    }
+
+    #banner {
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+        background: #611C8C;
+        background: linear-gradient(135deg, #611C8C, #B83AEA);
+        color: white;
+        width: 100%;
+        height: 30vh;
+    }
+
+    #contato .form {
+        width: 100%;
+    }
+}
+
 @media (max-width:767px){
   #footer h5 {
     padding-left: 0;
@@ -355,4 +474,11 @@ section .section-title {
     padding-bottom: 0px;
     margin-bottom: 10px;
 }
+}
+
+@media (max-width:550px) {
+    .imagem-mulher {
+        width: 300px;
+        border-radius: 150px;
+    } 
 }
